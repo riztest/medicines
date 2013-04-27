@@ -1,0 +1,40 @@
+        
+        
+        <div>
+    
+       <div>
+        <div>
+          <h2 >Medicines</h2>
+          <table>
+            <tr>
+             
+               <td width="221">ID</td>
+               <td width="221">Name</td>
+              <td width="250">Code_for_placing_order</td>
+              <td width="221">Ordered Qty</td>
+              <td width="83">Order</td>
+            </tr>
+            
+           
+           
+                  
+                  <%if !@medicines.blank?%>
+                  <% @medicines.each do |r| %>
+                    <tr>
+                      <td width="221"><%=r.id%></td>
+                       <td width="221"><%= "#{r.name}" %></td>
+                        <td width="250"><%= "#{r.code_for_placing_order}" %></td>
+                        <td width="221"><%= "#{r.ordered_qty}" %></td>
+                        <td  width="93"><%= link_to(image_tag("order-btn.png"), "#")%>
+                      </td>
+                       <% end %>
+                   </tr>
+                 <%end%>
+           
+          </table>
+       
+        </div>
+         </div>
+      
+     
+    </div>

@@ -1,0 +1,32 @@
+
+
+
+
+
+<div>
+    <h2>Editing Medicine</h2>
+    <div >
+        <%= form_for(@medicine) do |f| %>
+     <%= simple_format (errors_for(@medicine,"Could not update Medicine").html_safe) %>
+     <%= render :partial => 'form', :locals => { :f => f } %>
+
+      <div>
+        
+      
+        <div >
+        <%= f.submit "Update",:style=>"width:70px" %>
+        <input type="button" value="Back" onclick="window.location.href='<%=  medicines_path %>'"  style="width:60px" />
+     </div> 
+      
+      </div>
+  
+<% end %>
+    </div>
+    
+    </div>
+
+
+
+
+
+

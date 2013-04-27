@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+
+<div>
+  <span> 
+    <input type="button" value="Edit" onclick="window.location.href='<%=  edit_medicine_path(@medicine.id) %>'" />
+     <input type="button" value="Back" onclick="window.location.href='<%=  medicines_path %>'" />
+  </span>
+    <h2>Medicine Details</h2>
+     <div  >
+   <div>
+   <div>
+        <span>Name</span>
+        <span ><%=  @medicine.name  %></span>
+        </div> 
+    
+     <div >
+     <div>
+        <span>Code for Ordered placing</span>
+        <span><%=  @medicine.code_for_placing_order %></span>
+        </div> 
+       </div>
+      <div>
+        <span>Ordered Qty</span>
+        <span><%=  @medicine.ordered_qty%></span>
+        </div> 
+    </div>
+
+ 
+     
+       
+        <div style="width: 100% ; float: left">
+      
+    </div>
+     
+      </div>
+  
+    
+    
+</div>
+
+
+
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        

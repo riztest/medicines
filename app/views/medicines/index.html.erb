@@ -1,0 +1,44 @@
+        
+        
+        <div>
+     <span>  <input type="button" value="New Medicine" style="width: 100px;" onclick="window.location.href='<%=  new_medicine_path %>'" /></span>
+      
+    
+       <div>
+        <div >
+          <h2 >Medicines</h2>
+          <table>
+            <tr>
+             
+               <td width="221">ID</td>
+               <td width="221">Name</td>
+              <td width="250">Code_for_placing_order</td>
+              <td width="221">Ordered Qty</td>
+              <td width="83">Edit</td>
+              <td width="93">Delete</td>
+            </tr>
+            
+           
+           
+                  
+                  <%if !@medicines.blank?%>
+                  <% @medicines.each do |r| %>
+                    <tr>
+                      <td width="221"><%= link_to("#{r.id}", medicine_path(r.id))%></td>
+                       <td width="221"><%= "#{r.name}" %></td>
+                        <td width="250"><%= "#{r.code_for_placing_order}" %></td>
+                        <td width="221"><%= "#{r.ordered_qty}" %></td>
+                        <td width="83"><%= link_to(image_tag("edit-icon.png"), edit_medicine_path(r.id))%></td>
+                        <td  width="93"><%= link_to(image_tag("delet-btn.png"), r, :confirm => "Are you sure you want to delete medicine?", :method => :delete)%>
+                      </td>
+                       <% end %>
+                   </tr>
+                 <%end%>
+           
+          </table>
+       
+        </div>
+         </div>
+      
+     
+    </div>
